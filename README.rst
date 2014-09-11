@@ -1,6 +1,12 @@
 Simple natural order sorting API for Python
 ===========================================
 
+.. image:: https://travis-ci.org/xolox/python-naturalsort.svg?branch=master
+   :target: https://travis-ci.org/xolox/python-naturalsort
+
+.. image:: https://coveralls.io/repos/xolox/python-naturalsort/badge.png?branch=master
+   :target: https://coveralls.io/r/xolox/python-naturalsort?branch=master
+
 The ``natsort.natsort()`` function in the ``naturalsort`` package is a very
 simple alternative to Python's ``sorted()`` function that implements `natural
 order sorting`_ in Python. The package is available on PyPI_, so getting
@@ -33,6 +39,11 @@ characters) compared to `natural order sorting`_::
    > # This is natural order sorting (what we DO want).
    > natsort(['1', '5', '10', '50'])
    ['1', '5', '10', '50']
+   >
+   > # natsort() accepts a optional ``reverse`` argument for consistency with
+   > the built-in sorted() function.
+   > natsort(['1', '5', '10', '50'], reverse=True)
+   ['50', '10', '5', '1']
 
 Custom comparison keys
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -106,7 +117,7 @@ License
 
 This software is licensed under the `MIT license`_.
 
-© 2013 Peter Odding.
+© 2014 Peter Odding.
 
 .. External references:
 .. _ASCII: http://en.wikipedia.org/wiki/ASCII
